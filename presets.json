@@ -1,0 +1,17 @@
+{
+  "presets": [
+    { "name": "03 Sweep Gauge",  "description": "Sweeps the gauges on 03-07 GMT800", "data": "6C 60 F1 AE 20 FF FF 00 00 00 00" },
+    { "name": "03 Lights",        "description": "Turns on all lights 03-07 GMT800",  "data": "6C 60 F1 AE 11 01 01 00 00 00 00" },
+    { "name": "03 Screen Blocks",      "description": "Turns on all blocks of the screen 03-07 GMT800",              "data": "6C 60 F1 AE 21 88 88 00 00 00 00" },
+    { "name": "Coolant Temp",    "description": "Mode 01 PID 05 request",              "data": "68 6A F1 01 05" },
+    { "name": "Vehicle Speed",   "description": "Mode 01 PID 0D request",              "data": "68 6A F1 01 0D" },
+    { "name": "Supported PIDs",  "description": "Mode 01 PID 00 request",              "data": "68 6A F1 01 00" }
+  ],
+  "rules": [
+    { "name": "OBD request",     "match": "68 6A F1",  "label": "OBD-II request (tester -> ECM)", "color": "#4FC3F7" },
+    { "name": "OBD response",    "match": "48 6B ??",  "label": "OBD-II response (from ECU)",     "color": "#81C784" },
+    { "name": "Tester present",  "match": "FE ?? F1 3F", "label": "Tester Present",               "color": "#FFD54F" },
+    { "name": "Negative resp",   "match": "?? ?? ?? 7F", "label": "Negative response",            "color": [255, 100, 100] },
+    { "name": "Any broadcast",   "match": "6C FE",     "label": "Broadcast frame",                "color": "#BA68C8" }
+  ]
+}

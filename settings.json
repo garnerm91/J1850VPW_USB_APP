@@ -1,0 +1,26 @@
+{
+  "serial": {
+    "port": "COM21",
+    "baud_rate": 115200
+  },
+  "window": {
+    "title": "J1850 VPW USB Console",
+    "width": 796,
+    "height": 539
+  },
+  "theme": "dark",
+  "font": {
+    "path": "C:/Windows/Fonts/verdana.ttf",
+    "size": 16.0
+  },
+  "presets_path": "presets.json",
+  "console": {
+    "max_lines": 3000,
+    "auto_scroll": true
+  },
+  "display": {
+    "trim_crc": true,
+    "show_timestamp": false,
+    "show_command": false
+  }
+}
